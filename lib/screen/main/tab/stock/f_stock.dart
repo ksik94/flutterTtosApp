@@ -1,3 +1,5 @@
+import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/common/widget/w_rounded_contain.dart';
 import 'package:flutter/material.dart';
 
 class StockFragment extends StatefulWidget {

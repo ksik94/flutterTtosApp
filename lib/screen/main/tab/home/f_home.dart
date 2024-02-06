@@ -57,6 +57,7 @@ class HomeFragment extends StatelessWidget {
             ),
           ),
           TtosAppBar(),
+          // Container(padding: const EdgeInsets.only(top: 40, bottom: 40), child: BigButton("철민이형", onTap: () => print("퍼즐 퇴사할까?")))
         ],
       ),
     );

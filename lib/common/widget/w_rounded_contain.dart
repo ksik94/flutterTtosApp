@@ -11,7 +11,7 @@ class RoundedContainer extends StatelessWidget {
   const RoundedContainer(
       {super.key,
       required this.child,
-        this.width,
+      this.width,
       this.radius = 20,
       this.backgroundColor,
       this.padding = const EdgeInsets.symmetric(horizontal: 20, vertical: 15)});
@@ -19,6 +19,7 @@ class RoundedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width,
       padding: padding,
       decoration: BoxDecoration(
         color: backgroundColor ?? context.appColors.roundedLayoutBackground,
