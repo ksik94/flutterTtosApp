@@ -17,7 +17,7 @@ class BankAccountWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return Tap(
       onTap: () =>__print(),
       child: Row(
         children: [
