@@ -31,7 +31,9 @@ class HomeFragment extends StatelessWidget {
               await sleepAsync(5000.ms);
             },
             child: SingleChildScrollView(
-              padding: const EdgeInsets.only(top: TtosAppBar.appBarHeight, bottom: MainScreenState.bottomNavigationBarHeight),
+              padding: const EdgeInsets.only(
+                  top: TtosAppBar.appBarHeight,
+                  bottom: MainScreenState.bottomNavigationBarHeight),
               child: Column(
                 children: [
                   height10,
@@ -56,7 +58,7 @@ class HomeFragment extends StatelessWidget {
               ).pSymmetric(h: 20),
             ),
           ),
-          TtosAppBar(),
+          const TtosAppBar(),
           // Container(padding: const EdgeInsets.only(top: 40, bottom: 40), child: BigButton("철민이형", onTap: () => print("퍼즐 퇴사할까?")))
         ],
       ),
