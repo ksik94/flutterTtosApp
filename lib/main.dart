@@ -7,6 +7,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 void main() async {
+  // 패스트 캠퍼스 클론 코딩
   final bindings = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: bindings);
   await EasyLocalization.ensureInitialized();
