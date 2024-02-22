@@ -11,12 +11,21 @@ void main() async {
   FlutterNativeSplash.preserve(widgetsBinding: bindings);
   await EasyLocalization.ensureInitialized();
   await AppPreferences.init();
-  timeago.setLocaleMessages('ko', timeago.KoMessages());
+  timeago.setLocaleMessages(
+    'ko',
+    timeago.KoMessages(),
+  );
 
-  runApp(EasyLocalization(
-      supportedLocales: const [Locale('en'), Locale('ko')],
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ko'),
+      ],
       fallbackLocale: const Locale('en'),
       path: 'assets/translations',
       useOnlyLangCode: true,
-      child: const App()));
+      child: const App(),
+    ),
+  );
 }
