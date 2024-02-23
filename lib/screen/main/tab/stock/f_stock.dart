@@ -12,6 +12,43 @@ class StockFragment extends StatefulWidget {
 class _StockFragmentState extends State<StockFragment> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          actions: [
+            ImageButton(),
+            Image.asset(
+              "$basePath/icon/stock_calendar.png",
+              height: 26,
+              width: 26,
+            ).p(10),
+            Image.asset(
+              "$basePath/icon/stock_settings.png",
+              height: 26,
+              width: 26,
+            ).p(10),
+          ],
+        )
+      ],
+    );
+  }
+}
+
+class ImageButton extends StatelessWidget {
+  const ImageButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Tap(
+        onTap: () {
+          context.showSnackbar("검색");
+        },
+        child: Image.asset(
+          "$basePath/icon/stock_search.png",
+          height: 26,
+          width: 26,
+        ).p(10));
   }
 }
