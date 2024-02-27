@@ -11,13 +11,13 @@ class StockItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: context.backgroundColor,
+      color: context.appColors.roundedLayoutBackground,
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: [
           Image.asset(stock.stockImagePath, width: 50,),
           width20,
-          stock.stockName.text.size(15).bold.make(),
+          stock.name.text.size(15).bold.make(),
           emptyExpanded,
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,

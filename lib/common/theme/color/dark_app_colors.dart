@@ -19,8 +19,8 @@ class DarkAppColors extends AbstractThemeColors {
   @override
   Color get drawerBg => const Color.fromARGB(255, 42, 42, 42);
 
-  @override
-  Color get hintText => AppColors.grey;
+  // @override
+  // Color get hintText => AppColors.grey;
 
   @override
   Color get iconButton => const Color.fromARGB(255, 255, 255, 255);

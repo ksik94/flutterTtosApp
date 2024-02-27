@@ -1,7 +1,8 @@
-import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/screen/main/tab/stock/vo_stock.dart';
 
-List<Stock> myInteresStocks = [
+import '../../../../../common/constants.dart';
+
+List<Stock> popularStockList = [
   Stock(yesterdayColsePrice: 41600,
     currentPrice: 41600,
     stockName: "한화솔루션",

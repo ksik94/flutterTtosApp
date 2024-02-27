@@ -11,12 +11,15 @@ class MyStockFragment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        getmyAccount(context),
-        height20,
-        getMyStocks(context),
-      ],
+    return Container(
+      color: context.appColors.roundedLayoutBackground,
+      child: Column(
+        children: [
+          getmyAccount(context),
+          // height20,
+          getMyStocks(context),
+        ],
+      ),
     );
   }
 
@@ -31,13 +34,13 @@ class MyStockFragment extends StatelessWidget {
             Row(
               children: [
                 '443원'.text.size(24).bold.make(),
-                Arrow(),
+                const Arrow(),
                 emptyExpanded,
                 RoundedContainer(
-                  child: '채우기'.text.size(12).make(),
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                   radius: 8,
                   backgroundColor: context.appColors.roundedLayoutBackground,
+                  child: '채우기'.text.size(12).make(),
                 ),
               ],
             ),
@@ -48,11 +51,11 @@ class MyStockFragment extends StatelessWidget {
             height10,
             LongButton(
               title: "주문내역",
-              onTap: () {},
+              onTap: () {print("tap 주문내역");},
             ),
             LongButton(
               title: "판매내역",
-              onTap: () {},
+              onTap: () {print("tap 판매내역");},
             ),
           ],
         ),
@@ -85,7 +88,7 @@ class MyStockFragment extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     "기본".text.make(),
-                    Arrow(
+                    const Arrow(
                       direction: AxisDirection.up,
                     ),
                   ],
@@ -95,7 +98,7 @@ class MyStockFragment extends StatelessWidget {
           ],
         ),
       ),
-      InterestStockList().pSymmetric(h:20),
+      const InterestStockList().pSymmetric(h:20),
     ],
   );
 }

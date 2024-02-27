@@ -12,14 +12,17 @@ class LongButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15),
-      child: Row(
-        children: [
-          title.text.make(),
-          emptyExpanded,
-          Arrow(color: context.appColors.lessImportant,),
-        ],
+    return Tap(
+      onTap: onTap.call,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 15),
+        child: Row(
+          children: [
+            title.text.make(),
+            emptyExpanded,
+            Arrow(color: context.appColors.lessImportant,),
+          ],
+        ),
       ),
     );
   }
