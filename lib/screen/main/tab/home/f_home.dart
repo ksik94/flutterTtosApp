@@ -1,4 +1,3 @@
-import 'package:fast_app_base/common/cli_common.dart';
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_rounded_contain.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
@@ -23,9 +22,10 @@ class HomeFragment extends StatelessWidget {
       color: Colors.black,
       child: Stack(
         children: [
-          // onRefresh 함수 정보보면 Future 함수를 받음. -> 비동기 함수를 받는다는 뜻.
+          // onRefresh 함수 정보 보면 Future 함수를 받음. -> 비동기 함수를 받는 다는 뜻.
           RefreshIndicator(
             edgeOffset: TtosAppBar.appBarHeight,
+            triggerMode: RefreshIndicatorTriggerMode.onEdge,
             onRefresh: () async {
               print("새로고침 중");
               await sleepAsync(5000.ms);
@@ -56,7 +56,7 @@ class HomeFragment extends StatelessWidget {
                   )
                 ],
               ).pSymmetric(h: 20),
-            ),
+            ).animate().slideY(duration: 1000.ms),
           ),
           const TtosAppBar(),
           // Container(padding: const EdgeInsets.only(top: 40, bottom: 40), child: BigButton("철민이형", onTap: () => print("퍼즐 퇴사할까?")))

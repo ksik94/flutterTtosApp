@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/util/local_json.dart';
 import 'package:get/get.dart';
 
@@ -26,15 +27,17 @@ class SearchStockData extends GetxController {
   }
 
   void search(String keyword) {
-    if(keyword.isEmpty) {
+    if (keyword.isEmpty) {
       autoCompleteList.clear();
       return;
     }
-    autoCompleteList.value =
-        stocks.where((element) => element.name.contains(keyword)).toList();
+    autoCompleteList.value = stocks
+        .where((element) =>
+            element.name.toUpperCase().contains(keyword.toUpperCase()))
+        .toList();
   }
 
   void addHistory(SimpleStock stock) {
-    searchHistory.add(stock.name);
+    if (!searchHistory.contains(stock.name)) searchHistory.add(stock.name);
   }
 }
